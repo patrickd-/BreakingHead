@@ -29,6 +29,7 @@ for card_group_dir in $front_cards_dir/*; do
         # Iterate through the card images of this type.
         for card_file in $front_cards_dir/$card_group/$card_type/*; do
           card_file_name=$(basename "$card_file")
+          card_layout="${card_file_name%-*}"
           if [[ "$card_file_name" != "__"* ]]; then
             card_counter=$[$card_counter+1]
 
@@ -37,8 +38,16 @@ for card_group_dir in $front_cards_dir/*; do
             # Move card to build directory.
             cp $card_file "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
 
+            # Composite layout for this card.
+            if [[ -f $front_cards_dir/$card_group/$card_type/__layout/$card_file_name ]]; then
+              composite $front_cards_dir/$card_group/$card_type/__layout/$card_file_name "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
+            fi
+            if [[ -f $front_cards_dir/$card_group/$card_type/__layout/$card_layout.png ]]; then
+              composite $front_cards_dir/$card_group/$card_type/__layout/$card_layout.png "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
+            fi
+
             # Composite layout for this card type.
-            if [[ -f "$front_cards_dir/$card_group/__layout/$card_type.png" ]]; then
+            if [[ -f $front_cards_dir/$card_group/__layout/$card_type.png ]]; then
               composite "$front_cards_dir/$card_group/__layout/$card_type.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
             fi
 
