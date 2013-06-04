@@ -36,19 +36,19 @@ for card_group_dir in $front_cards_dir/*; do
             echo "    Processing card image: $card_file"
 
             # Move card to build directory.
-            cp $card_file "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
+            cp $card_file "$build_dir/$card_group/$card_counter-$card_type-$card_file_name"
 
             # Composite layout for this card.
             if [[ -f $front_cards_dir/$card_group/$card_type/__layout/$card_file_name ]]; then
-              composite $front_cards_dir/$card_group/$card_type/__layout/$card_file_name "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
+              composite $front_cards_dir/$card_group/$card_type/__layout/$card_file_name "$build_dir/$card_group/$card_counter-$card_type-$card_file_name" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name"
             fi
             if [[ -f $front_cards_dir/$card_group/$card_type/__layout/$card_layout.png ]]; then
-              composite $front_cards_dir/$card_group/$card_type/__layout/$card_layout.png "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
+              composite $front_cards_dir/$card_group/$card_type/__layout/$card_layout.png "$build_dir/$card_group/$card_counter-$card_type-$card_file_name" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name"
             fi
 
             # Composite layout for this card type.
             if [[ -f $front_cards_dir/$card_group/__layout/$card_type.png ]]; then
-              composite "$front_cards_dir/$card_group/__layout/$card_type.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name.png"
+              composite "$front_cards_dir/$card_group/__layout/$card_type.png" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name" "$build_dir/$card_group/$card_counter-$card_type-$card_file_name"
             fi
 
           fi
