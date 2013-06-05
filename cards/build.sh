@@ -16,7 +16,7 @@ for card_group_dir in $front_cards_dir/*; do
     mkdir "$build_dir/$card_group"
 
     # Add the format overlay to the card background and save it to build.
-    composite "$back_cards_dir/overlay.png" "$back_cards_dir/$card_group.png" "$build_dir/$card_group/0-back.png"
+    cp "$back_cards_dir/$card_group.png" "$build_dir/$card_group/0-back.png"
 
     # Iterate through card types of this group.
     card_counter=0
