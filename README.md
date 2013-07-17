@@ -73,3 +73,8 @@ This game is still a work-in-progress and you can add your own cards!
 - [ ] Print a prototype of the game, make pictures and add them to the game manual
 - [ ] Test the prototype and fix issues with the images
 - [ ] Print and distribute the game on the next drupal camp and cons?
+
+####Printing
+
+Card size:
+63 x 88 mm (815 x 1110 pixels, Int. poker format)
