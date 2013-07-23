@@ -16,7 +16,7 @@ curl "$1" > tmp.htm
 
 echo "SELECTING COMMENT"
 sed '/<!DOCTYPE html>/,/<body/ !d' tmp.htm > comment.htm
-sed '/<a id="comment-4949912">/,/<a id="comment-/ !d' tmp.htm >> comment.htm
+sed "/<a id=\"comment-$2\">/,/<a id=\"comment-/ !d" tmp.htm >> comment.htm
 echo '</body></html>' >> comment.htm
 sed '/comment_forbidden/d' ./comment.htm > comment2.htm
 
