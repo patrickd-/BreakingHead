@@ -13,7 +13,20 @@ About the game
 
 This game is based on the card game [Saboteur designed by Frederic Moyersoen](http://en.wikipedia.org/wiki/Saboteur_\(card_game\)) where players are either assigned the role of the good *contributor* or the bad *blocker*.
 
-Further details can be found in the game manual.
+Further details can be found in the [game manual](https://github.com/patrickd-/BreakingHead/blob/master/manual/manual.pdf?raw=true).
+
+Editions
+--------
+See [tag list](https://github.com/patrickd-/BreakingHead/releases).
+
+
+Printing
+--------
+
+- **Card size:** 63 × 88 mm (815 × 1110 pixels, Int. poker format)
+- **Manual:** 210 × 297 mm (DIN A4, ISO 216)
+- **Packaging:** Not final yet.
+
 
 About this repository
 ---------------------
@@ -33,7 +46,7 @@ About this repository
 - **/manual/**: Contains the game manual (editable and as PDF)
 - **/packaging/**: Contains the game packaging design.
 
-####What the /cards/build.sh-script does
+####/cards/build.sh
 
 It basically copies all images from the recursive src/front folder over the the flat build/ directory.
 Additionally it determines the appropriate card back-image and moves it to the build/ directory for each group of cards.
@@ -41,41 +54,6 @@ When there are layout-overlay images in "__layout" folders with proplerly named 
 As a result all the card fronts should be available as build/[group-name]/[serial number beginning at 1]-[image name].png and the cards back for the whole group should be prefixed with "0-". 
 
 
-####Suitable images???
+####/cards/comment2card.sh
 
-**playable cards**, are cards that the players can use during the game.
-- **playable/block**: Cards that block other players (3 different types, each one has 3 similar pictures). Examples: A broken GIT head, lost internet connection
-- **playable/unblock**: Cards that un-block other players (Same 3 types as the blocking cards, each 2 similar pictures; Additionally 3 cards mixing the types with each other (unblocks 1/2, 1/3 and 2/3)).
-- **playable/path**: Cards that are the paths to walk on for the players (5 crossings, 8 curves of 2 kinds, 10 junctions of 2 kinds, 7 straight paths of 2 kinds). Examples: Funny issue comments, comments with patches.
-- **playable/deadend**: Cards that are blocked paths where players are unable to walk on (1 crossing-deadend, 2 curved-deadends, 2 total deadends, 2 junction and 2 straight deadends). Examples: Issue comments setting to needs work.
-- **playable/destroypath**: Cards that can destroy paths or deadends when played (3 similar pictures). Examples: Spam comments.
-- **playable/viewend**: Cards that enable a user to have a look at one of the end cards when played (6 similar pictures). Examples: Pictures of smiling Dries.
-
-**player cards**, are cards that assign the players their role.
-- **contributor**: Cards that assign players the good contributor role. Examples: Happy core committers.
-- **blocker**: Cards that assign players the bad blocker role. Examples: Angry core committers.
-
-**special cards**, are cards that have a special role during the game.
-- **end**: The end cards (2 wrong-end cards and 1 correct-end card). Examples: Patch needs reroll, Committed!
-- **start**: The path start-card. Example: An issue summary.
-
-**Make sure that the usage of the images is compatible with the GPLv2 license!**
-
-Status
-------
-
-This game is still a work-in-progress and you can add your own cards!
-
-- [X] Implement a script to automatically build cards based on layouts and images
-- [ ] Add suitable images for all cards (at the moment there is only a dummy image for each card)
-- [ ] Create a pictured game manual based on the original
-- [ ] Design a packaging for the cards
-- [ ] Print a prototype of the game, make pictures and add them to the game manual
-- [ ] Test the prototype and fix issues with the images
-- [ ] Print and distribute the game on the next drupal camp and cons?
-
-Printing
---------
-
-Card size:
-63 x 88 mm (815 x 1110 pixels, Int. poker format)
+Takes a drupal.org issue url with comment-anchor as argument and creates a card (screenshot with exact card dimensions) out of the specified comment.
