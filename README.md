@@ -17,7 +17,9 @@ Further details can be found in the [game manual](https://github.com/patrickd-/B
 
 Editions
 --------
-See [tag list](https://github.com/patrickd-/BreakingHead/releases).
+Each edition is [tagged](https://github.com/patrickd-/BreakingHead/releases).
+
+- [**1st-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/1st-edition): 1 known copy
 
 
 Printing
