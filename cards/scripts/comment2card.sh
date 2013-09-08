@@ -23,7 +23,7 @@ curl "${ARG[0]}" > tmp.htm
 
 echo "SELECTING COMMENT"
 sed '/<!DOCTYPE html>/,/<body/ !d' tmp.htm > comment.htm
-echo '<style>body{font-size: 1.4em;}</style>' >> comment.htm 
+echo '<style>body{font-size: 1.4em;}</style>' >> comment.htm
 sed "/<a id=\"${ARG[1]}\">/,/<a id=\"comment-/ !d" tmp.htm >> comment.htm
 echo '</body></html>' >> comment.htm
 sed '/comment_forbidden/d' ./comment.htm > comment2.htm

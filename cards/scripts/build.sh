@@ -1,9 +1,16 @@
 #!/bin/bash
 
-source config
+if [ $# -eq 0 ]
+  then
+    echo "No source and build directory specified"
+    exit
+fi
 
-# Clean build directory.
-rm -rf ./$build_dir/*
+front_cards_dir="$1/front"
+back_cards_dir="$1/back"
+build_dir=$2
+
+mkdir "$build_dir"
 
 # Iterate through front card groups.
 for card_group_dir in $front_cards_dir/*; do
