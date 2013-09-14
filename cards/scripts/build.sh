@@ -16,13 +16,11 @@ mkdir "$build_dir"
 export IFS=" "
 cat "./card-comment-mapping" | while read cardfile commenturl
 do
+  # Convert each issue-comment to a card.
   echo "Creating $cardfile from $commenturl"
   ./scripts/comment2card.sh $commenturl
   mv "./card.png" "$front_cards_dir/$cardfile"
 done
-
-exit
-
 
 # Iterate through front card groups.
 for card_group_dir in $front_cards_dir/*; do
