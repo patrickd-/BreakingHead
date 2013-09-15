@@ -5,7 +5,7 @@ Breaking Head
 
 **This game makes the assumption that there are bad people in the issue queue on drupal.org - this is not the case! Luckily the Drupal community consists of very friendly contributors always willing to help each other. But sometimes working in the queue can be depressing and this game covers situations when people have the feeling that progress is willingly blocked for no good reason.**
 
-!["Image of an example breaking head playing card"](https://github.com/patrickd-/BreakingHead/blob/master/cards/src/back/playable.png?raw=true "Breaking Head playing card game")
+!["Image of an example breaking head playing card"](https://raw.github.com/patrickd-/BreakingHead/master/other/logo.png "Breaking Head playing card game")
 
 
 About the game
@@ -20,6 +20,10 @@ Editions
 Each edition is [tagged](https://github.com/patrickd-/BreakingHead/releases).
 
 - [**1st-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/1st-edition): 1 copy
+
+!["1st-edition of BreakingHead"](https://raw.github.com/patrickd-/BreakingHead/master/other/1st-edition-thumb.jpg "1st-edition of BreakingHead")
+
+
 - [**2nd-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/2nd-edition): 2 copies
 
 
