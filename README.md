@@ -24,7 +24,7 @@ Each edition is [tagged](https://github.com/patrickd-/BreakingHead/releases).
 !["1st-edition of BreakingHead"](https://raw.github.com/patrickd-/BreakingHead/master/other/1st-edition-thumb.jpg "1st-edition of BreakingHead")
 
 
-- [**2nd-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/2nd-edition): 2 copies
+- [**2nd-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/2nd-edition): 4 copies
 
 
 Printing
