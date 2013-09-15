@@ -19,7 +19,8 @@ Editions
 --------
 Each edition is [tagged](https://github.com/patrickd-/BreakingHead/releases).
 
-- [**1st-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/1st-edition): 1 known copy
+- [**1st-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/1st-edition): 1 copy
+- [**2nd-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/2nd-edition): 2 copies
 
 
 Printing
