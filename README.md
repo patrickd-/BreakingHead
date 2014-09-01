@@ -1,6 +1,8 @@
 Breaking Head
 =============
 
+[![Tips](http://img.shields.io/gittip/patrickd.png)](https://www.gittip.com/patrickd/)
+
 ###Open source card game about the Drupal.org issue queue.
 
 **This game makes the assumption that there are bad people in the issue queue on drupal.org - this is not the case! Luckily the Drupal community consists of very friendly contributors always willing to help each other. But sometimes working in the queue can be depressing and this game covers situations when people have the feeling that progress is willingly blocked for no good reason.**
