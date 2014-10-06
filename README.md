@@ -27,7 +27,7 @@ Each edition is [tagged](https://github.com/patrickd-/BreakingHead/releases).
 
 
 - [**2nd-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/2nd-edition): 4 copies
-
+- [**3rd-edition**](https://github.com/patrickd-/BreakingHead/releases/tag/3rd-edition): 12 copies
 
 Printing
 --------
@@ -44,7 +44,9 @@ About this repository
 ####Directory structure
 
 - **/cards/**: Contains all data about the actual playing cards
-- **/cards/build.sh**: Script to automatically generate the cards from the src/ folder to the build/ folder.
+- **/cards/Makefile**: Executing this makefile will build all the cards from the src/ folder to the build/ folder.
+- **/cards/card-comment-mapping**: Specifies which card should be automatically filled with which Drupal.org issue comment.
+- **/cards/scripts**: Scripts to automatically generate the cards used by the makefile.
 - **/cards/build/**: The generated cards, ready for printing.
 - **/cards/src/**: The source images of the cards, need to be processed first.
 - **/cards/src/back/**: The card back-images. (Named by "[group-name].png")
@@ -55,7 +57,7 @@ About this repository
 - **/manual/**: Contains the game manual (editable and as PDF)
 - **/packaging/**: Contains the game packaging design.
 
-####/cards/build.sh
+####/cards/scripts/build.sh
 
 It basically copies all images from the recursive src/front folder over the the flat build/ directory.
 Additionally it determines the appropriate card back-image and moves it to the build/ directory for each group of cards.
@@ -63,6 +65,6 @@ When there are layout-overlay images in "__layout" folders with proplerly named 
 As a result all the card fronts should be available as build/[group-name]/[serial number beginning at 1]-[image name].png and the cards back for the whole group should be prefixed with "0-". 
 
 
-####/cards/comment2card.sh
+####/cards/scripts/comment2card.sh
 
 Takes a drupal.org issue url with comment-anchor as argument and creates a card (screenshot with exact card dimensions) out of the specified comment.
