@@ -3,7 +3,7 @@ Breaking Head
 
 [![Tips](http://img.shields.io/gittip/patrickd.png)](https://www.gittip.com/patrickd/)
 
-###Open source card game about the Drupal.org issue queue.
+## Open source card game about the Drupal.org issue queue.
 
 **This game makes the assumption that there are bad people in the issue queue on drupal.org - this is not the case! Luckily the Drupal community consists of very friendly contributors always willing to help each other. But sometimes working in the queue can be depressing and this game covers situations when people have the feeling that progress is willingly blocked for no good reason.**
 
@@ -41,7 +41,7 @@ About this repository
 ---------------------
 
 
-####Directory structure
+### Directory structure
 
 - **/cards/**: Contains all data about the actual playing cards
 - **/cards/Makefile**: Executing this makefile will build all the cards from the src/ folder to the build/ folder.
@@ -57,7 +57,7 @@ About this repository
 - **/manual/**: Contains the game manual (editable and as PDF)
 - **/packaging/**: Contains the game packaging design.
 
-####/cards/scripts/build.sh
+### /cards/scripts/build.sh
 
 It basically copies all images from the recursive src/front folder over the the flat build/ directory.
 Additionally it determines the appropriate card back-image and moves it to the build/ directory for each group of cards.
@@ -65,6 +65,6 @@ When there are layout-overlay images in "__layout" folders with proplerly named 
 As a result all the card fronts should be available as build/[group-name]/[serial number beginning at 1]-[image name].png and the cards back for the whole group should be prefixed with "0-". 
 
 
-####/cards/scripts/comment2card.sh
+### /cards/scripts/comment2card.sh
 
 Takes a drupal.org issue url with comment-anchor as argument and creates a card (screenshot with exact card dimensions) out of the specified comment.
